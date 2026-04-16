@@ -881,7 +881,7 @@ with tab4:
 #  TAB 5 – INSIGHT & REKOMENDASI
 # ═══════════════════════════════════════════════════════════════════
 with tab5:
-    st.markdown("## POPINEE INSIGHT & REKOMENDASI EKSEKUTIF")
+    st.markdown("## POPINE INSIGHT & REKOMENDASI EKSEKUTIF")
     
     wil_pop_max   = d25_all.loc[d25_all["Penduduk_Ribu"].idxmax(), "Wilayah"]
     pop_max       = d25_all["Penduduk_Ribu"].max()
@@ -974,7 +974,7 @@ with tab5:
 st.markdown("""
 <hr class="tech-line" style="margin-top: 40px;">
 <div style="text-align: center; font-size: 0.85rem; color: #64748b; font-weight: 600; padding-bottom: 30px; font-family: 'Courier New', Courier, monospace;">
-  >_ TERMINAL: POPINEE_DASHBOARD_JABAR_2023_2025 // KONEKSI AMAN<br>
+  >_ TERMINAL: POPINE_DASHBOARD_JABAR_2023_2025 // KONEKSI AMAN<br>
   >_ SUMBER INTELIJEN: BPS JAWA BARAT // MODEL MESIN: K-MEANS CLUSTERING<br>
   <span style="color: #0284c7; font-weight: 700;">>_ RENDERED BY STREAMLIT & PLOTLY ENGINE</span>
 </div>
