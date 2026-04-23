@@ -490,7 +490,7 @@ KATEGORI_klinik  = total_klinik25 - d23_all["Klinik_Pratama"].sum()
 
 c1, c2, c3, c4, c5 = st.columns(5)
 for col, judul, angka, ket, warna in [
-    (c1, "POPULASI GLOBAL '25", f"{total_pop25/1_000_000:.2f} JT", f"↑ +{KATEGORI_pop:.1f}% DARI 2023", "#0284c7"), 
+    (c1, "TOTAL PENDUDUK '25", f"{total_pop25/1_000_000:.2f} JT", f"↑ +{KATEGORI_pop:.1f}% DARI 2023", "#0284c7"), 
     (c2, "RS UMUM AKTIF",       str(total_rsu25),                  f"↑ +{KATEGORI_rsu} UNIT BARU",    "#0ea5e9"), 
     (c3, "JARINGAN PUSKESMAS",  str(total_pkm25),                  "STATUS: TERDISTRIBUSI",        "#059669"), 
     (c4, "KLINIK PRATAMA",      str(total_klinik25),               f"↑ +{KATEGORI_klinik} DARI 2023", "#d97706"), 
@@ -544,7 +544,7 @@ with tab1:
     k1, k2 = st.columns(2)
 
     with k1:
-        st.markdown("### LINTASAN POPULASI GLOBAL (JABAR)")
+        st.markdown("### LINTASAN POPULASI JABAR)")
         tot_year = df_all.groupby("Tahun")["Penduduk_Ribu"].sum().reset_index()
         tot_year["Juta"] = tot_year["Penduduk_Ribu"] / 1000
         fig = go.Figure()
@@ -803,7 +803,7 @@ with tab4:
     st.markdown("## DETEKSI STANDAR KELAYAKAN GLOBAL")
     st.markdown("""
     <div class="kotak-general kotak-biru">
-    <b>REFERENSI PROTOKOL (WHO & KEMENKES RI):</b><br>
+    <b>REFERENSI PROTOKOL (KEMENKES RI – Permenkes No. 56/2014)::</b><br>
     > <b>RS UMUM:</b> Threshold minimal <b>0.42</b> per 100K populasi.<br>
     > <b>PUSKESMAS:</b> Threshold minimal <b>3.33</b> per 100K populasi.
     </div>
@@ -904,7 +904,7 @@ with tab5:
          f"Rasio terendah tercatat (<b>{rsu_min_val:.3f}</b>/100K). Zona ini mengalami kegagalan sistemik dalam memenuhi kapasitas minimum rujukan sekunder. Intervensi struktural darurat diperlukan."),
         ("kotak-kuning", 
          f"[-] DEFISIT SKALA BESAR ({n_kurang_rsu} SEKTOR)",
-         f"<b>{(n_kurang_rsu/27)*100:.0f}%</b> grid wilayah berada di bawah rasio aman WHO. Anomali ini menunjukkan ketidakmampuan tata ruang mengimbangi laju reproduksi demografi."),
+         f"<b>{(n_kurang_rsu/27)*100:.0f}%</b> grid wilayah berada di bawah rasio aman Kemenkes RI. Anomali ini menunjukkan ketidakmampuan tata ruang mengimbangi laju reproduksi demografi."),
         ("kotak-biru",   
          f"[+] BEBAN MAKSIMUM: {wil_pop_max.upper()}",
          f"Puncak populasi di angka <b>{pop_max/1000:.1f} JT Jiwa</b>. Sistem kesehatan di kuadran ini menahan tekanan terberat dan rawan mengalami 'bottle-neck' layanan fisik."),
